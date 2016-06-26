@@ -12,8 +12,11 @@
 		F5C0D0A11D2069100086EA30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C0D09F1D2069100086EA30 /* Main.storyboard */; };
 		F5C0D0A31D2069100086EA30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5C0D0A21D2069100086EA30 /* Assets.xcassets */; };
 		F5C0D0A61D2069100086EA30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C0D0A41D2069100086EA30 /* LaunchScreen.storyboard */; };
-		F5C0D0B11D2069100086EA30 /* RockPaperScissorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C0D0B01D2069100086EA30 /* RockPaperScissorsTests.swift */; };
 		F5C0D0BC1D2069100086EA30 /* RockPaperScissorsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C0D0BB1D2069100086EA30 /* RockPaperScissorsUITests.swift */; };
+		F5C0D0CA1D209C010086EA30 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C0D0C91D209C010086EA30 /* Move.swift */; };
+		F5C0D0CE1D209D7E0086EA30 /* BrainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C0D0CD1D209D7E0086EA30 /* BrainTests.swift */; };
+		F5C0D0D01D209DC60086EA30 /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C0D0CF1D209DC60086EA30 /* Brain.swift */; };
+		F5C0D0D21D209F720086EA30 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C0D0D11D209F720086EA30 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +45,14 @@
 		F5C0D0A51D2069100086EA30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5C0D0A71D2069100086EA30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5C0D0AC1D2069100086EA30 /* RockPaperScissorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RockPaperScissorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5C0D0B01D2069100086EA30 /* RockPaperScissorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockPaperScissorsTests.swift; sourceTree = "<group>"; };
 		F5C0D0B21D2069100086EA30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5C0D0B71D2069100086EA30 /* RockPaperScissorsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RockPaperScissorsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5C0D0BB1D2069100086EA30 /* RockPaperScissorsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockPaperScissorsUITests.swift; sourceTree = "<group>"; };
 		F5C0D0BD1D2069100086EA30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5C0D0C91D209C010086EA30 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		F5C0D0CD1D209D7E0086EA30 /* BrainTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrainTests.swift; sourceTree = "<group>"; };
+		F5C0D0CF1D209DC60086EA30 /* Brain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
+		F5C0D0D11D209F720086EA30 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 				F5C0D0A21D2069100086EA30 /* Assets.xcassets */,
 				F5C0D0A41D2069100086EA30 /* LaunchScreen.storyboard */,
 				F5C0D0A71D2069100086EA30 /* Info.plist */,
+				F5C0D0C91D209C010086EA30 /* Move.swift */,
+				F5C0D0CF1D209DC60086EA30 /* Brain.swift */,
+				F5C0D0D11D209F720086EA30 /* Player.swift */,
 			);
 			path = RockPaperScissors;
 			sourceTree = "<group>";
@@ -110,8 +119,8 @@
 		F5C0D0AF1D2069100086EA30 /* RockPaperScissorsTests */ = {
 			isa = PBXGroup;
 			children = (
-				F5C0D0B01D2069100086EA30 /* RockPaperScissorsTests.swift */,
 				F5C0D0B21D2069100086EA30 /* Info.plist */,
+				F5C0D0CD1D209D7E0086EA30 /* BrainTests.swift */,
 			);
 			path = RockPaperScissorsTests;
 			sourceTree = "<group>";
@@ -257,6 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5C0D09E1D2069100086EA30 /* ViewController.swift in Sources */,
+				F5C0D0CA1D209C010086EA30 /* Move.swift in Sources */,
+				F5C0D0D01D209DC60086EA30 /* Brain.swift in Sources */,
+				F5C0D0D21D209F720086EA30 /* Player.swift in Sources */,
 				F5C0D09C1D2069100086EA30 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,7 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5C0D0B11D2069100086EA30 /* RockPaperScissorsTests.swift in Sources */,
+				F5C0D0CE1D209D7E0086EA30 /* BrainTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,10 +435,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RockPaperScissorsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SamGalizia.RockPaperScissorsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RockPaperScissors.app/RockPaperScissors";
 			};
 			name = Debug;
@@ -435,6 +449,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RockPaperScissorsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SamGalizia.RockPaperScissorsTests;
