@@ -15,17 +15,62 @@ class BrainTests: XCTestCase {
 
   override func setUp() {
     super.setUp()
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    
   }
   
   override func tearDown() {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
     super.tearDown()
   }
   
-  func test_checkReturnsPlayer() {
-    let result = brain.check()
-    XCTAssertNotNil(result)
+  func test_checkReturnsOutcome() {
+    let result = brain.check(.Rock, compMove: .Scissors)
+    XCTAssertEqual(result, Outcome.Win)
+  }
+  
+  func test_playerPicksRock_playerWins() {
+    let result = brain.check(.Rock, compMove: .Scissors)
+    XCTAssertEqual(result, Outcome.Win)
+  }
+  
+  func test_playerPicksRock_playerLoses() {
+    let result = brain.check(.Rock, compMove: .Paper)
+    XCTAssertEqual(result, Outcome.Lose)
+  }
+  
+  func test_playerPicksRock_playerTies() {
+    let result = brain.check(.Rock, compMove: .Rock)
+    XCTAssertEqual(result, Outcome.Tie)
+  }
+  
+  func test_playerPicksPaper_playerWins() {
+    let result = brain.check(.Paper, compMove: .Rock)
+    XCTAssertEqual(result, Outcome.Win)
+  }
+  
+  func test_playerPicksPaper_playerLoses() {
+    let result = brain.check(.Paper, compMove: .Scissors)
+    XCTAssertEqual(result, Outcome.Lose)
+  }
+  
+  func test_playerPicksPaper_playerTies() {
+    let result = brain.check(.Paper, compMove: .Paper)
+    XCTAssertEqual(result, Outcome.Tie)
+  }
+  
+  func test_playerPicksScissors_playerWins() {
+    let result = brain.check(.Scissors, compMove: .Paper)
+    XCTAssertEqual(result, Outcome.Win)
+  }
+  
+  func test_playerPicksScissors_playerLoses() {
+    let result = brain.check(.Scissors, compMove: .Rock)
+    XCTAssertEqual(result, Outcome.Lose)
+  }
+  
+  func test_playerPicksScissors_playerTies() {
+    let result = brain.check(.Scissors, compMove: .Scissors)
+    XCTAssertEqual(result, Outcome.Tie)
   }
 
 }

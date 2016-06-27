@@ -10,9 +10,37 @@ import Foundation
 
 class Brain: NSObject {
   
-  func check() -> Player {
+  var outcome: Outcome?
+  
+  func check(playerMove: Move, compMove: Move) -> Outcome {
     
-    return Player()
+    if playerMove == Move.Rock {
+      if compMove == Move.Rock {
+        outcome = .Tie
+      } else if compMove == Move.Scissors {
+        outcome = .Win
+      } else {
+        outcome = .Lose
+      }
+    } else if playerMove == Move.Paper {
+      if compMove == Move.Paper {
+        outcome = .Tie
+      } else if compMove == Move.Rock {
+        outcome = .Win
+      } else {
+        outcome = .Lose
+      }
+    } else if playerMove == Move.Scissors {
+      if compMove == Move.Scissors {
+        outcome = .Tie
+      } else if compMove == Move.Paper {
+        outcome = .Win
+      } else {
+        outcome = .Lose
+      }
+    }
+    
+    return outcome!
   }
   
 }
